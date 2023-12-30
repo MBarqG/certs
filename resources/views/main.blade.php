@@ -65,11 +65,14 @@
         </div>
     </div>
     <script src="{{ asset('js\main.js') }}"></script>
+    @if (isset($domain))
     <script>
+
         function updateCertNumber(newCertNumber) {
             window.location.href = '/Search?domain={{ $domain }}&certnumber=' + newCertNumber;
         }
     </script>
+    @endif
 </body>
 
 </html>
